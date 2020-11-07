@@ -7,7 +7,7 @@ auto main(int argc, char *argv[]) -> int {
     do{
         std::cout << "Podaj haslo: ";
         std::getline(std::cin, in);
-    }while(in.compare(password));
+    }while(in == password);
 
     std::cout << "Haslo poprawne";
     return 0;
