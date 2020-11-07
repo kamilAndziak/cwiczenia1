@@ -11,11 +11,11 @@ auto main() -> int {
         std::getline(std::cin, line);
         in = std::stoi(line);
         if (in > i){
-            std::cout << "number too big!" << std::endl;
+            std::cout << "number too big!\n";
             continue;
         }
         if (in < i){
-            std::cout << "number too small!" << std::endl;
+            std::cout << "number too small!\n";
             continue;
         }
         std::cout << "just right!";
