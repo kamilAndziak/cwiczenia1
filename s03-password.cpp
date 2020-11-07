@@ -2,11 +2,12 @@
 #include <string>
 
 auto main(int argc, char *argv[]) -> int {
-    auto pass = std::string();
+    auto const password = std::string{argv[1]};
+    auto in = std::string();
     do{
         std::cout << "Podaj haslo: ";
-        std::getline(std::cin, pass);
-    }while(pass.compare(argv[1]));
+        std::getline(std::cin, in);
+    }while(in.compare(password));
 
     std::cout << "Haslo poprawne";
     return 0;
