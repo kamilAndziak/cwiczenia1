@@ -1,17 +1,14 @@
 #include <iostream>
-#include <string.h>
+#include <cstring>
 
-auto main() -> int {
-    char pass[20];
-    std::cout << "Ustaw haslo: ";
-    std::cin >> pass;
-
-    char pass2[20];
+auto main(int argc, char *argv[]) -> int {
+    char pass[argc];
     do{
         std::cout << "Podaj haslo: ";
-        std::cin >> pass2;
-    }while(strcmp(pass, pass2));
+        std::cin >> pass;
+    }while(strcmp(argv[1], pass));
 
     std::cout << "Haslo poprawne";
     return 0;
 }
+
