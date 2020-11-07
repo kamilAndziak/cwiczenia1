@@ -1,12 +1,12 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 
 auto main(int argc, char *argv[]) -> int {
-    char pass[argc];
+    auto pass = std::string();
     do{
         std::cout << "Podaj haslo: ";
-        std::cin >> pass;
-    }while(strcmp(argv[1], pass));
+        std::getline(std::cin, pass);
+    }while(pass.compare(argv[1]));
 
     std::cout << "Haslo poprawne";
     return 0;
